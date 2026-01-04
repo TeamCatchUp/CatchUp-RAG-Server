@@ -50,7 +50,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
         title="CatchUp RAG Server",
         lifespan=lifespan,
-        redirect_slashes=False
+        redirect_slashes=False,
         version=__version__
     )
 
