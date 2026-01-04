@@ -31,7 +31,9 @@ charset-normalizer==2.1.1
 click==8.3.1
     # via uvicorn
 cohere==5.20.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   langchain-cohere
 dataclasses-json==0.6.7
     # via langchain-community
 distro==1.9.0
@@ -105,11 +107,16 @@ langchain==0.3.27
     # via
     #   -r requirements.in
     #   langchain-community
-langchain-community==0.3.27
+langchain-cohere==0.4.6
     # via -r requirements.in
+langchain-community==0.3.27
+    # via
+    #   -r requirements.in
+    #   langchain-cohere
 langchain-core==0.3.81
     # via
     #   langchain
+    #   langchain-cohere
     #   langchain-community
     #   langchain-openai
     #   langchain-text-splitters
@@ -229,6 +236,7 @@ pydantic==2.12.5
     #   cohere
     #   fastapi
     #   langchain
+    #   langchain-cohere
     #   langchain-core
     #   langfuse
     #   langgraph
@@ -340,6 +348,8 @@ tqdm==4.66.5
     #   transformers
 transformers==4.57.3
     # via sentence-transformers
+types-pyyaml==6.0.12.20250915
+    # via langchain-cohere
 types-requests==2.31.0.6
     # via cohere
 types-urllib3==1.26.25.14
