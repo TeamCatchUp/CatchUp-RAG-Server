@@ -15,7 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY requirements.txt .
 
-RUN uv pip install --system -r requirements.txt
+RUN uv pip install --system \
+    --extra-index-url https://download.pytorch.org/whl/cpu \
+    -r requirements.txt
 
 FROM python:3.12-slim
 
