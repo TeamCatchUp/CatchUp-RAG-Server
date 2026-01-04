@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from app import __version__
 from app.core.config import settings, MeiliEnvironment
 from app.rag.api.router import router as chat_router
 from app.rag.factory import get_vector_repository
@@ -50,6 +51,7 @@ app = FastAPI(
         title="CatchUp RAG Server",
         lifespan=lifespan,
         redirect_slashes=False
+        version=__version__
     )
 
 
