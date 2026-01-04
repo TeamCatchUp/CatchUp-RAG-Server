@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY requirements.txt .
 
-RUN pip install --user --no-cache-dir -r requirements.txt
-    
+RUN pip install --user --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu    
+
 FROM python:3.12-slim
 
 # .pyc 파일 생성 방지, 로그가 버퍼링 없이 콘솔에 출력되도록
